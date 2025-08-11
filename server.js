@@ -5,13 +5,9 @@ const reviewRoutes = require('./routes/reviewRoutes');
 const app = express();
 app.use(express.json());
 
-app.use('/api/reviews', reviewRoutes);
+// Routes
+app.use('/reviews', reviewRoutes);
 
-if (process.env.NODE_ENV !== 'production') {
-  const PORT = process.env.PORT || 4000;
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-}
-
-// Export for Vercel
+// Export as serverless function
 module.exports = app;
 module.exports.handler = serverless(app);
