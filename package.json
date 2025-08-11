@@ -1,14 +1,10 @@
 {
   "name": "flex-living-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"
   },
