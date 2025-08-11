@@ -8,4 +8,8 @@ app.use('/api/reviews', reviewRoutes);
 
 app.get('/', (req, res) => res.send('API is running!'));
 
-module.exports = app;
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
