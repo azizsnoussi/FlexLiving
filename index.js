@@ -1,5 +1,4 @@
 const express = require('express');
-const serverless = require('serverless-http');
 const reviewRoutes = require('./routes/reviewRoutes');
 
 const app = express();
@@ -7,5 +6,4 @@ app.use(express.json());
 
 app.use('/reviews', reviewRoutes);
 
-module.exports = app;
-module.exports.handler = serverless(app);
+app.listen(4000,console.log("Server started on port 4000"));
